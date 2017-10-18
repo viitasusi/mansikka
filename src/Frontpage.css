@@ -1,0 +1,5 @@
+.Frontpage {
+  display: grid;
+  grid-template-columns:  auto;
+  grid-template-rows: 200px auto;
+}

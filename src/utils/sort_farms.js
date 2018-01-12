@@ -3,10 +3,10 @@ import _ from 'lodash';
 
 export const sortByDistance = (farms, userGeolocation) => {
   return _.orderBy(_.map(farms, farm => {
-    return _.assignIn(farm, {distance: geolib.getDistanceSimple(
+    return _.assignIn(farm, {distance: Math.round(geolib.getDistanceSimple(
       {latitude: farm.geolocation.lat, longitude: farm.geolocation.lng},
       {latitude: userGeolocation.lat, longitude: userGeolocation.lng}
-    )/1000});
+    )/1000)});
   }), 'distance', 'asc');
 }
 

@@ -20,7 +20,11 @@ class FarmsIndex extends Component {
       return _.map(sortByDistance(this.props.farms, this.props.location), farm => {
         return(
           <FarmPaper
-            farm={farm}
+            id={farm.id}
+            address={farm.address}
+            distance={farm.distance}
+            zip={farm.zip}
+            city={farm.city}
             key={farm.id}
           />
         );
@@ -30,7 +34,10 @@ class FarmsIndex extends Component {
       return _.map(sortAlphabetically(this.props.farms), farm => {
         return(
           <FarmPaper
-            farm={farm}
+            id={farm.id}
+            address={farm.address}
+            zip={farm.zip}
+            city={farm.city}
             key={farm.id}
           />
         );

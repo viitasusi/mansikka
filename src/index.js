@@ -15,6 +15,7 @@ import Navbar from './Navbar';
 import reducers from './reducers';
 
 import FarmsIndex from './containers/farms_index.js';
+import FarmsShow from './containers/farms_show.js';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -24,6 +25,7 @@ ReactDOM.render(
       <MuiThemeProvider>
         <div>
           <Switch>
+            <Route path="/farms/:id" component={FarmsShow} />
             <Route exact={true} path="/" component={FarmsIndex} />
           </Switch>
         </div>

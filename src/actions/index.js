@@ -1,4 +1,5 @@
 export const FETCH_FARMS = 'fetch_farms';
+export const FETCH_FARM = 'fetch_farm';
 export const GET_LOCATION = 'get_location';
 
 export function fetchFarms() {
@@ -14,6 +15,15 @@ export function fetchFarms() {
     payload: request
   };
 };
+
+export function fetchFarm(id) {
+    const request = {id: '1', address: 'Kuninkaankatu 1', zip: '33101', city: 'Tampere', geolocation: {lat: 10, lng: 10}, products: {strawberry: true, blueberry: false}}
+
+    return {
+      type: FETCH_FARM,
+      payload: request
+    }
+}
 
 export const getLocation = () => {
   const geolocation = navigator.geolocation;

@@ -10,10 +10,10 @@ class Navbar extends Component {
       <div className='Navbar'>
           <AppBar
             showMenuIconButton={false}
-            title='Mansikka' style={{backgroundColor: '#f80c3a'}}
+            title='Mansikkamaa' style={{backgroundColor: '#f80c3a'}}
             iconElementRight={<FlatButton label="Luo tunnukset" style={{backgroundColor: 'white', color: '#f80c3a'}}
                                 containerElement={<Link to="/signup" />}
-                                linkButton={true}
+
             />}
           />
       </div>

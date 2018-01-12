@@ -6,6 +6,7 @@ import './App.css';
 import Navbar from './Navbar';
 import Frontpage from './Frontpage';
 import Signup from './Signup';
+import FarmContainer from './FarmContainer';
 
 class App extends Component {
   render() {
@@ -14,10 +15,6 @@ class App extends Component {
         <MuiThemeProvider>
           <div className="App">
             <Navbar />
-            <Switch>
-              <Route exact path='/' component={Frontpage} />
-              <Route path='/signup' component={Signup} />
-            </Switch>
           </div>
         </MuiThemeProvider>
       </BrowserRouter>

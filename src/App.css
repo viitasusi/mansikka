@@ -16,3 +16,14 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.farm-container {
+  margin: 10px 10px 0 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.farm {
+  padding: 10px;
+}

@@ -24,7 +24,10 @@
   grid-gap: 10px;
 }
 
-.farm-paper {
-  padding: 10px;
+.link {
   text-decoration: none;
+}
+
+.farm-paper {
+  padding: 5px 10px 5px 10px;
 }

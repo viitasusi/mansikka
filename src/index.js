@@ -11,6 +11,7 @@ import promise from 'redux-promise';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './Navbar';
+import Header from './components/Header.js'
 
 import reducers from './reducers';
 
@@ -24,6 +25,7 @@ ReactDOM.render(
     <BrowserRouter>
       <MuiThemeProvider>
         <div>
+          <Header />
           <Switch>
             <Route path="/farms/:id" component={FarmsShow} />
             <Route exact={true} path="/" component={FarmsIndex} />

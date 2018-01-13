@@ -1,14 +1,15 @@
 import React from 'react';
 import Paper from "material-ui/Paper";
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import '../App.css';
 
 const FarmPaper = (props) => {
   console.log(props.id);
   return(
-    <Link to={`/farms/${props.id}`}>
+    <Link to={`/farms/${props.id}`} className="link">
       <Paper className="farm-paper">
-        <div>Tilan nimi: {props.id}</div>
+        <h3>Tilan nimi: {props.id}</h3>
         <div>Osoite: {props.address}, {props.zip} {props.city}</div>
         <div>Etäisyys: {props.distance}km</div>
       </Paper>

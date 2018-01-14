@@ -26,6 +26,7 @@ class FarmsShow extends Component {
 
     return(
       <div>
+        <h1></h1>
         {this.props.farm.address}
       </div>
     );

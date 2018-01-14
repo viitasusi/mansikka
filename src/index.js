@@ -8,22 +8,20 @@ import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import promise from 'redux-promise';
 
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './Navbar';
-import Header from './components/Header.js'
-
 import reducers from './reducers';
 
 import FarmsIndex from './containers/farms_index.js';
 import FarmsShow from './containers/farms_show.js';
+import Header from './components/Header.js'
+
+import './App.css';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
-    <BrowserRouter>
-      <MuiThemeProvider>
+    <MuiThemeProvider>
+      <BrowserRouter>
         <div>
           <Header />
           <Switch>
@@ -31,8 +29,8 @@ ReactDOM.render(
             <Route exact={true} path="/" component={FarmsIndex} />
           </Switch>
         </div>
-      </MuiThemeProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </MuiThemeProvider>
   </Provider>
   , document.querySelector('.root'));
 

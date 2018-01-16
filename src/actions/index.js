@@ -1,6 +1,7 @@
 export const FETCH_FARMS = 'fetch_farms';
 export const FETCH_FARM = 'fetch_farm';
 export const GET_LOCATION = 'get_location';
+export const ADD_FARM = 'add_farm';
 
 export function fetchFarms() {
   const request = [
@@ -17,12 +18,21 @@ export function fetchFarms() {
 };
 
 export function fetchFarm(id) {
-    const request = {id: '1', address: 'Kuninkaankatu 1', zip: '33101', city: 'Tampere', geolocation: {lat: 10, lng: 10}, products: {strawberry: true, blueberry: false}}
+  const request = {id: '1', address: 'Kuninkaankatu 1', zip: '33101', city: 'Tampere', geolocation: {lat: 10, lng: 10}, products: {strawberry: true, blueberry: false}}
 
-    return {
-      type: FETCH_FARM,
-      payload: request
-    }
+  return {
+    type: FETCH_FARM,
+    payload: request
+  }
+}
+
+export function addFarm(values, callback) {
+  const request = values;
+
+  return {
+    type: ADD_FARM,
+    payload: request
+  }
 }
 
 export const getLocation = () => {

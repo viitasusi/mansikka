@@ -22,12 +22,14 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <MuiThemeProvider>
       <BrowserRouter>
-        <div>
+        <div className="body-container">
           <Header />
-          <Switch>
-            <Route path="/farms/:id" component={FarmsShow} />
-            <Route exact={true} path="/" component={FarmsIndex} />
-          </Switch>
+          <div className="main">
+            <Switch>
+              <Route path="/farms/:id" component={FarmsShow} />
+              <Route exact={true} path="/" component={FarmsIndex} />
+            </Switch>
+          </div>
         </div>
       </BrowserRouter>
     </MuiThemeProvider>

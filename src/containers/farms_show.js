@@ -26,7 +26,6 @@ class FarmsShow extends Component {
     return(
       <div>
         <h1>{this.props.farm.id}</h1>
-        {this.props.farm.address}
         <FarmMap
           lat={this.props.farm.geolocation.lat}
           lng={this.props.farm.geolocation.lng} 

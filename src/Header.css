@@ -5,12 +5,6 @@
 .Header {
   background-color: #99ccff;
   padding: 5px;
-  color: white;
   text-align: center;
-  position: sticky;
-  width: 100%;
 }
 
-.Header-title {
-  font-size: 1.5em;
-}

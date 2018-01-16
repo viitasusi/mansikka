@@ -12,6 +12,37 @@
   to { transform: rotate(360deg); }
 }
 
+.body-container {
+  display: grid;
+    grid-template-areas: "header header header"
+                         ". main .";
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: 65px 
+                        1fr;
+    min-height: 100vh;
+}
+
+@media screen and (max-width: 600px) {
+  .body-container {
+      grid-template-areas: "header"
+                           "main";
+      grid-template-columns: 100%;
+      grid-template-rows: 65px 
+                          1fr;
+  }
+}
+
+.main { 
+  grid-area: main; 
+}
+
+.header {
+  grid-area: header;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
 .farm-container {
   margin: 10px 10px 0 10px;
   display: grid;

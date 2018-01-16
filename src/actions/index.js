@@ -28,6 +28,7 @@ export function fetchFarm(id) {
 
 export function addFarm(values, callback) {
   const request = values;
+  callback();
 
   return {
     type: ADD_FARM,

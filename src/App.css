@@ -61,3 +61,11 @@
 .farm-paper:hover {
   background-color: #dbdbdb;
 }
+
+.form-action-buttons {
+  margin-top: 5px;
+}
+
+.submit-button {
+ margin-right: 10px;   
+}

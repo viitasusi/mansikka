@@ -5,7 +5,6 @@ import { fetchFarm, getLocation } from '../actions';
 import _ from 'lodash';
 import '../App.css';
 import geolib from 'geolib';
-import { sortByDistance, sortAlphabetically } from '../utils/sort_farms';
 import FarmMap from '../components/farm_map';
 
 class FarmsShow extends Component {

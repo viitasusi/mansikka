@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 
 const FarmPaper = (props) => {
-  console.log(props.id);
   return(
     <Link to={`/farms/${props.id}`} className="link">
       <Paper className="farm-paper">

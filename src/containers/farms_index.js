@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { fetchFarms, getLocation } from '../actions';
 import _ from 'lodash';
 import '../App.css';
-import geolib from 'geolib';
 import { sortByDistance, sortAlphabetically } from '../utils/sort_farms';
 
 import FarmPaper from '../components/farm_paper'

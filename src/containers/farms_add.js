@@ -3,44 +3,87 @@ import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { addFarm } from '../actions';
+import TextField from "material-ui/TextField";
+import Checkbox from "material-ui/Checkbox";
+import RaisedButton from "material-ui/RaisedButton";
+import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton'
 
 class FarmsAdd extends Component {
-    renderField = (field) => {
-        const className = `form-group ${field.meta.touched && field.meta.error ? 'has-danger' : ''}`;
-    
+    renderTextField = ({ 
+        input, 
+        label,
+        meta: {touched, error},
+        ...custom
+    }) => {
         return (
-          <div className={className}>
-            <label>{field.label}</label>
-            <input
-              className="form-control"
-              type="text"
-              {...field.input}
+          <div>
+            <TextField
+                hintText={label}
+                floatingLabelText={label}
+                errorText={touched && error}
+                {...input}
+                {...custom}
             />
-            <div className="text-help">
-            {field.meta.touched ? field.meta.error : ''}
-            </div>
           </div>
         )
       }
 
+    renderCheckbox = ({ input, label }) => (
+    <Checkbox
+        label={label}
+        checked={input.value ? true : false}
+        onCheck={input.onChange}
+        labelPosition='left'
+    />
+    )
+
     onSubmit = (values) => {
-        this.props.createPost(values, () => {
-          this.props.history.push('/');
+        console.log(values);
+        this.props.addFarm(values, () => {
+            this.props.history.push('/');
         });
-      }
+        }
 
     render() {
         const { handleSubmit } = this.props;
     
         return(
             <form onSubmit={handleSubmit(this.onSubmit)}>
-            <Field
-                label="Title"
-                name="title"
-                component={this.renderField}
-            />
-            <button type="submit" className="btn btn-primary">Submit</button>
-            <Link to="/" className="btn btn-danger">Cancel</Link>
+                <Field
+                    label="Tilan nimi"
+                    name="name"
+                    component={this.renderTextField}
+                />
+                <Field
+                    label="Katuosoite"
+                    name="address"
+                    component={this.renderTextField}
+                />
+                <Field
+                    label="Postinumero"
+                    name="zip"
+                    component={this.renderTextField}
+                />
+                <Field
+                    label="Kunta"
+                    name="city"
+                    component={this.renderTextField}
+                />
+                <h3>Tilalla on tällä hetkellä myynnissä seuraavia tuotteita:</h3>
+                <Field
+                    label="mansikoita"
+                    name="products.strawberry"
+                    component={this.renderCheckbox}
+                />
+                <Field
+                    label="mustikoita"
+                    name="products.blueberry"
+                    component={this.renderCheckbox}
+                />
+                <div className="form-action-buttons">
+                    <RaisedButton type="submit" primary={true} className="submit-button">Submit</RaisedButton>
+                    <RaisedButton secondary={true}><Link to="/" className="link">Cancel</Link></RaisedButton>
+                </div>
             </form>
         )
     };
@@ -49,16 +92,27 @@ class FarmsAdd extends Component {
 function validate(values) {
     const errors = {};
   
-    if(!values.title) {
-      errors.title = 'Enter a Title';
+    if(!values.name) {
+      errors.name = 'Kirjoita tilan nimi';
     }
+    if(!values.address) {
+        errors.address = 'Kirjoita katuosoite';
+      }
+      if(!values.zip) {
+        errors.zip = 'Kirjoita postinumero';
+      }
+      if(!values.city) {
+        errors.city = 'Kirjoita kunta, jossa tila sijaitsee';
+      }
     
     return errors;
 }
 
 export default reduxForm({
     validate,
-    form: 'FarmsAddForm'
-  })(
-    connect(null, { addFarm })(FarmsAdd)
+    form: 'FarmsAddForm',
+    initialValues: {products:
+                    {strawberry: false, blueberry: false}
+                    }
+})(connect(null, { addFarm })(FarmsAdd)
   );

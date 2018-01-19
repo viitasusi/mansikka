@@ -5,7 +5,7 @@ import { GoogleMap, Marker, withGoogleMap, withScriptjs } from 'react-google-map
 
 const FarmMap = withScriptjs(withGoogleMap((props) => {
   return(
-    <div>kartta
+    <div>
       <GoogleMap
         defaultZoom={8}
         defaultCenter={{ lat: props.lat, lng: props.lng }}

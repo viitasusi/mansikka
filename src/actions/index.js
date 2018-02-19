@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export const FETCH_FARMS = 'fetch_farms';
 export const FETCH_FARM = 'fetch_farm';
 export const GET_LOCATION = 'get_location';

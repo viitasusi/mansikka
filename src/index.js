@@ -27,7 +27,7 @@ ReactDOM.render(
           <Header />
           <div className="main">
             <Switch>
-            <Route exact path="/farms/add" component={FarmsAdd} />
+              <Route exact path="/farms/add" component={FarmsAdd} />
               <Route path="/farms/:id" component={FarmsShow} />
               <Route exact={true} path="/" component={FarmsIndex} />
             </Switch>
@@ -36,6 +36,6 @@ ReactDOM.render(
       </BrowserRouter>
     </MuiThemeProvider>
   </Provider>
-  , document.querySelector('.root'));
+  , document.querySelector('.root')
+);
 
-registerServiceWorker();

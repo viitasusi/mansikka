@@ -6,6 +6,7 @@ export default function(state = {}, action) {
     case FETCH_FARM:
       return { ...state, [action.payload.id]: action.payload }
     case FETCH_FARMS:
+      console.log(action.payload);
       return _.mapKeys(action.payload, 'id');
     default:
       return state;

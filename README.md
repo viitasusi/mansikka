@@ -9,6 +9,7 @@ www.github.com/viitasusi/mansikka_server
  
 
 **Target architecture:**
+![archtecture](architecture.jsg)
 
 **Backlog:**
 API server connections

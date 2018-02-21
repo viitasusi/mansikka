@@ -5,6 +5,7 @@
 **Related repo:** 
 www.github.com/viitasusi/mansikka_server
  
+
 **Target architecture:**
 
 **Backlog:**
@@ -20,17 +21,11 @@ Clean up the code
 …
 
 **To run the app:**
-1st you need to setup the API server
-
-clone the repo
-
-install the npm packages
-
-run “npm start” to launch the app
-
-Enjoy!
-
- 
+* 1st you need to setup the API server
+* clone the repo
+* install the npm packages
+* run `npm start` to launch the app
+* Enjoy the berries!
 
 This app is created using [Create React App](https://github.com/facebookincubator/create-react-app) and may contain unnecessary code.
 

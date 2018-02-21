@@ -28,7 +28,3 @@ Clean up the code
 * Enjoy the berries!
 
 This app is created using [Create React App](https://github.com/facebookincubator/create-react-app) and may contain unnecessary code.
-
-
-
-This project was bootstrapped with .

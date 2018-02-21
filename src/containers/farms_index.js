@@ -14,12 +14,13 @@ class FarmsIndex extends Component {
   }
 
   renderFarms = () => {
+    //console.log('props: ', this.props.farms);
     if(this.props.location.lat && this.props.location.lng) {
       return _.map(sortByDistance(this.props.farms, this.props.location), farm => {
         return(
           <FarmPaper
-            id={farm.id}
-            address={farm.address}
+            id={farm.name}
+            address={farm.street}
             distance={farm.distance}
             zip={farm.zip}
             city={farm.city}
@@ -33,7 +34,7 @@ class FarmsIndex extends Component {
         return(
           <FarmPaper
             id={farm.id}
-            address={farm.address}
+            address={farm.street}
             zip={farm.zip}
             city={farm.city}
             key={farm.id}

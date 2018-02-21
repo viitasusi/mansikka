@@ -19,7 +19,7 @@ Loading animations
 Clean up the code
 …
 
-To run the app:
+**To run the app:**
 1st you need to setup the API server
 
 clone the repo
@@ -32,9 +32,8 @@ Enjoy!
 
  
 
-This app is
-created using create-react-app and may contain unnecessary code.
+This app is created using [Create React App](https://github.com/facebookincubator/create-react-app) and may contain unnecessary code.
 
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project was bootstrapped with .

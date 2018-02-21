@@ -15,7 +15,7 @@ import FarmsShow from './containers/farms_show.js';
 import FarmsAdd from './containers/farms_add.js';
 import Header from './components/Header.js'
 
-import './App.css';
+import './css/styles.css';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 

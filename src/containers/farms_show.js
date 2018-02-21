@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchFarm, getLocation } from '../actions';
 import _ from 'lodash';
-import '../App.css';
+import '../css/styles.css';
 import geolib from 'geolib';
 import FarmMap from '../components/farm_map';
 import config from '../config.js';

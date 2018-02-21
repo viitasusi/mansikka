@@ -2,7 +2,7 @@ import React from 'react';
 import Paper from "material-ui/Paper";
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import '../App.css';
+import '../css/styles.css';
 
 const FarmPaper = (props) => {
   return(

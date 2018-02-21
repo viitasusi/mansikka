@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchFarms, getLocation } from '../actions';
 import _ from 'lodash';
-import '../App.css';
+import '../css/styles.css';
 import { sortByDistance, sortAlphabetically } from '../utils/sort_farms';
 
 import FarmPaper from '../components/farm_paper'

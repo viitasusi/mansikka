@@ -13,6 +13,7 @@ www.github.com/viitasusi/mansikka_server
 
 **Backlog:**
 API server connections
+Fix the design
 Write tests
 Signup
 Sign in

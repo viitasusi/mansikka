@@ -45,6 +45,12 @@ class FarmsIndex extends Component {
   }
 
   render() {
+    if(!this.props.farms) {
+      return(
+        <div>Loading!</div>
+      )
+    }
+
     return(
       <div className="farm-container">
         {this.renderFarms()}

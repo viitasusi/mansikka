@@ -1,11 +1,12 @@
-A react application that offers a web interface to find the berry farms near you!
+#Mansikkamaa
+##A react application that offers a web interface to find the berry farms near you!
 
-Related repo: 
+**Related repo:** 
 www.github.com/viitasusi/mansikka_server
  
-Target architecture:
+**Target architecture:**
 
-Backlog:
+**Backlog:**
 API server connections
 Write tests
 Signup

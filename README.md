@@ -1,6 +1,6 @@
 ## !!Please notice this app is still under construction!!. 
 
-# Mansikkamaa
+# Mansikka
 
 ## A react application that offers a web interface to find the berry farms near you!
 

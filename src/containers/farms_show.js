@@ -6,6 +6,7 @@ import _ from 'lodash';
 import '../App.css';
 import geolib from 'geolib';
 import FarmMap from '../components/farm_map';
+import config from '../config.js';
 
 class FarmsShow extends Component {
   componentDidMount() {
@@ -29,7 +30,7 @@ class FarmsShow extends Component {
           lat={this.props.farm.geolocation.lat}
           lng={this.props.farm.geolocation.lng} 
           isMarkerShown
-          googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+          googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&key=${config.googleApiKey}&libraries=geometry,drawing,places`}
           loadingElement={<div style={{ height: `100%` }} />}
           containerElement={<div style={{ height: `400px` }} />}
           mapElement={<div style={{ height: `100%` }} />}
@@ -41,7 +42,7 @@ class FarmsShow extends Component {
 
 function mapStateToProps(state, ownProps) {
   return { 
-    farm: state.farms[1],//state.farms[ownProps.match.params.id], 
+    farm: state.farms[1],
     location: state.location };
 }
 

@@ -3,10 +3,7 @@ A react application that offers a web interface to find the berry farms near you
 Related repo: 
 www.github.com/viitasusi/mansikka_server
  
-
 Target architecture:
-
- 
 
 Backlog:
 API server connections

@@ -22,7 +22,7 @@
     min-height: 100vh;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .body-container {
       grid-template-areas: "header"
                            "main";
@@ -33,7 +33,8 @@
 }
 
 .main { 
-  grid-area: main; 
+  grid-area: main;
+  text-decoration: none;
 }
 
 .header {
@@ -48,18 +49,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 10px;
+  grid-auto-rows: 1fr;
 }
 
-.link {
-  text-decoration: none;
-}
 
 .farm-paper {
   padding: 5px 10px 5px 10px;
-}
-
-.farm-paper:hover {
-  background-color: #dbdbdb;
 }
 
 .form-action-buttons {
@@ -68,4 +63,15 @@
 
 .submit-button {
  margin-right: 10px;   
+}
+
+a, a:link, a:visited, a:focus, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+.farm-paper-link:hover {
+  background-color: #dbdbdb;
+  text-decoration: none;
+  color: black;
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import mansikka from '../mansikka.svg';
-import '../Header.css';
+import '../css/header.css';
 import '../css/styles.css';
 
 

@@ -57,6 +57,10 @@
   padding: 5px 10px 5px 10px;
 }
 
+.farm-paper:hover {
+  background-color: #dbdbdb !important;
+}
+
 .form-action-buttons {
   margin-top: 5px;
 }
@@ -65,13 +69,8 @@
  margin-right: 10px;   
 }
 
-a, a:link, a:visited, a:focus, a:active {
+a, a:link, a:visited, a:focus, a:active, a:hover {
   text-decoration: none;
   color: black;
 }
 
-.farm-paper-link:hover {
-  background-color: #dbdbdb;
-  text-decoration: none;
-  color: black;
-}

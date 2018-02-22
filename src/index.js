@@ -13,7 +13,7 @@ import reducers from './reducers';
 import FarmsIndex from './containers/farms_index.js';
 import FarmsShow from './containers/farms_show.js';
 import FarmsAdd from './containers/farms_add.js';
-import Header from './components/Header.js'
+import Header from './components/header.js'
 
 import './css/styles.css';
 

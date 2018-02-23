@@ -8,7 +8,7 @@ const FarmPaper = (props) => {
   return(
       <Paper className="farm-paper">
         <Link to={`/farms/${props.id}`} className="farm-paper-link">
-          <h3>Tilan nimi: {props.id}</h3>
+          <h3>{props.id}</h3>
           <div>Osoite: {props.address}, {props.zip} {props.city}</div>
           <div>Etäisyys: {props.distance}km</div>
         </Link>

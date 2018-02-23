@@ -22,7 +22,7 @@
     min-height: 100vh;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .body-container {
       grid-template-areas: "header"
                            "main";
@@ -47,7 +47,7 @@
 .farm-container {
   margin: 10px 10px 0 10px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 10px;
   grid-auto-rows: 1fr;
 }

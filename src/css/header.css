@@ -3,8 +3,9 @@
 }
 
 .Header {
-  background-color: #99ccff;
+  background-color: white;
   padding: 5px;
   text-align: center;
+  border-bottom: 1px;
 }
 

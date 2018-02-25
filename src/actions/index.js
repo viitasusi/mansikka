@@ -5,15 +5,10 @@ export const FETCH_FARM = 'fetch_farm';
 export const GET_LOCATION = 'get_location';
 export const ADD_FARM = 'add_farm';
 
-export function fetchFarms() {
-  const request = [
-    {id: '1', address: 'Kuninkaankatu 1', zip: '33101', city: 'Tampere', geolocation: {lat: 10, lng: 10}, products: {strawberry: true, blueberry: false}},
-    {id: '2', address: 'Kuninkaankatu 2', zip: '70110', city: 'Kuopio', geolocation: {lat: 60, lng: 10}, products: {strawberry: true, blueberry: false}},
-    {id: '3', address: 'Kuninkaankatu 3', zip: '00200', city: 'Helsinki', geolocation: {lat: 40, lng: 10}, products: {strawberry: true, blueberry: false}},
-    {id: '4', address: 'Kuninkaankatu 4', zip: '70110', city: 'Kuopio',geolocation: {lat: 20, lng: 10}, products: {strawberry: true, blueberry: false}}
-  ];
+const ROOT_URL = process.env.REACT_APP_API_SERVER;
 
-  const r = axios.get(`${process.env.REACT_APP_API_SERVER}/farms`);
+export function fetchFarms() {
+  const r = axios.get(`${ROOT_URL}/farms`);
 
   return {
     type: FETCH_FARMS,

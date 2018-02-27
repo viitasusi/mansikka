@@ -8,16 +8,16 @@ export const ADD_FARM = 'add_farm';
 const ROOT_URL = process.env.REACT_APP_API_SERVER;
 
 export function fetchFarms() {
-  const r = axios.get(`${ROOT_URL}/farms`);
+  const request = axios.get(`${ROOT_URL}/farms`);
 
   return {
     type: FETCH_FARMS,
-    payload: r
+    payload: request
   };
 };
 
 export function fetchFarm(id) {
-  const request = {id: '1', address: 'Kuninkaankatu 1', zip: '33101', city: 'Tampere', geolocation: {lat: 10, lng: 10}, products: {strawberry: true, blueberry: false}}
+  const request = axios.get(`${ROOT_URL}/farms/${id}`);
 
   return {
     type: FETCH_FARM,

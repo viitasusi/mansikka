@@ -11,8 +11,8 @@ import config from '../config.js';
 class FarmsShow extends Component {
   componentDidMount() {
     if (!this.props.farm) {
-      //const { id } = this.props.match.params;
-      this.props.fetchFarms(); //update to use fetchFarm(id) once the API is ready
+      const { id } = this.props.match.params;
+      this.props.fetchFarm(id); 
       this.props.getLocation();
     }
   }
